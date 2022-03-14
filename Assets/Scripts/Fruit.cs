@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Fruit : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText;
     Vector3 location;
     static int scoreCount;
 
@@ -20,5 +22,6 @@ public class Fruit : MonoBehaviour
     private void Update()
     {
         Debug.Log("Score: " + scoreCount);
+        scoreText.text = "Score: " + scoreCount.ToString();
     }
 }
